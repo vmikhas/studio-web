@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Ruberoid-Bold';
-  src: local('NimbusSanNov-SemBol'),
+  font-family: 'Ruberoid';
+  src: local('Ruberoid-Regular'),
     url('Ruberoid-Regular.woff2') format('woff2'),
     url('Ruberoid-Regular.woff') format('woff'),
     url('Ruberoid-Regular.ttf') format('truetype');
@@ -10,8 +10,8 @@
 }
 
 @font-face {
-  font-family: 'Ruberoid-Bold';
-  src: local('NimbusSanNov-SemBol'),
+  font-family: 'Ruberoid';
+  src: local('Ruberoid-Medium'),
   url('Ruberoid-Medium.woff2') format('woff2'),
   url('Ruberoid-Medium.woff') format('woff'),
   url('Ruberoid-Medium.ttf') format('truetype');
@@ -21,8 +21,8 @@
 }
 
 @font-face {
-  font-family: 'Ruberoid-Bold';
-  src: local('NimbusSanNov-SemBol'),
+  font-family: 'Ruberoid';
+  src: local('Ruberoid-SemiBold'),
   url('Ruberoid-SemiBold.woff2') format('woff2'),
   url('Ruberoid-SemiBold.woff') format('woff'),
   url('Ruberoid-SemiBold.ttf') format('truetype');
@@ -32,8 +32,8 @@
 }
 
 @font-face {
-  font-family: 'Ruberoid-Bold';
-  src: local('NimbusSanNov-SemBol'),
+  font-family: 'Ruberoid';
+  src: local('Ruberoid-Bold'),
   url('Ruberoid-Bold.woff2') format('woff2'),
   url('Ruberoid-Bold.woff') format('woff'),
   url('Ruberoid-Bold.ttf') format('truetype');
@@ -43,8 +43,8 @@
 }
 
 @font-face {
-  font-family: 'Ruberoid-Bold';
-  src: local('NimbusSanNov-SemBol'),
+  font-family: 'Ruberoid';
+  src: local('Ruberoid-ExtraBold'),
   url('Ruberoid-ExtraBold.woff2') format('woff2'),
   url('Ruberoid-ExtraBold.woff') format('woff'),
   url('Ruberoid-ExtraBold.ttf') format('truetype');

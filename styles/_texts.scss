@@ -6,7 +6,7 @@
   font-family: $BASE-FONT;
   @include option(font-size, $PIC);
 
-  color: #000000;
+  color: $WHITE;
 }
 
 
@@ -25,6 +25,16 @@
   @include option(line-height, 32px);
   font-weight: 700;
 }
+
+%SUBTITLE {
+  font-family: $BASE-FONT;
+  @include option(font-size, 21px);
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 
 %TEXT {
   @include option(font-size, 13px);

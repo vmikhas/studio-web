@@ -1,0 +1,20 @@
+.reasons {
+  @mixin mod($mod) {
+    @include modifier("reasons", $mod){
+      @content;
+    }
+  }
+  @mixin mods($mods...) {
+    @for $i from 0 to length($mods) {
+      .reasons_#{nth($mods, $i + 1)} & {
+        @content;
+      }
+    }
+  }
+
+  &__line {
+    width: 100%;
+    @include option(height, 5);
+    background: linear-gradient(135deg, rgba(42, 188, 158, 0) 0%, #2abc9e 48.65%, rgba(42, 188, 158, 0) 100%);
+  }
+}

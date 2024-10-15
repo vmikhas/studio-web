@@ -7,9 +7,6 @@ export default function Home() {
   return (
     <div className="container">
       <PageDescription {...defaultPage}/>
-      <h1 className="title">
-        Welcome!
-      </h1>
     </div>
   );
 }

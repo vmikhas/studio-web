@@ -13,7 +13,7 @@ const CustomButton = React.forwardRef(
       <Button className={classNames("custom-button", {[`${className}`]: className}, {[`custom-button_icon`]: isIcon}, {[`custom-button_transparent`]: isTransparent}, {[`custom-button_hideContent`]: isLoad})} disabled={disabled} onClick={onClick} tag={tag} target={target} href={href} style={style}>
         {text && <div className={"custom-button__text"}>{text}</div>}
         {img && <div className={"custom-button__image"}><img src={image(img, true)} alt={''}/></div>}
-        {icon && <div className={"custom-button__image"}><Icon name={icon}/></div>}
+        {icon && <div className={"custom-button__icon"}><Icon name={icon}/></div>}
         <TransitionGroup component={null}>
           {isLoad ?
             <CSSTransition key={isLoad} timeout={{enter: 500, exit: 500}} classNames={"custom-button__load"}>

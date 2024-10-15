@@ -7,7 +7,7 @@ import baseUrl from "../utils/data/baseUrl";
 import erudaScripts from "../constants/DOM/erudaScript.html";
 
 class CustomDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getStaticProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
     return {...initialProps}
   }

@@ -12,7 +12,13 @@
     }
   }
 
+  display: flex;
+  align-items: center;
+  @include option(gap, 87);
+
   &__list {
+    display: flex;
+    @include option(gap, 41);
     margin: 0;
     padding: 0;
   }
@@ -20,8 +26,6 @@
   &__item{
     display: inline-block;
     vertical-align: middle;
-    padding: 10px 0;
-    margin: 0 15px 0 0;
 
     @include is-burger{
       display: block;
@@ -38,8 +42,11 @@
   }
 
   &__item-link{
+    @include option(padding, 12 0);
     font-family: $BASE-FONT;
-    font-size: 20px;
+    @include option(font-size, 19);
+    font-weight: 400;
+    letter-spacing: 0.01em;
     text-decoration: none;
     white-space: nowrap;
     color: $WHITE;

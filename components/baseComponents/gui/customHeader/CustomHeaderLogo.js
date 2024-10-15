@@ -5,7 +5,7 @@ export default function CustomHeaderLogo() {
   return (
     <div
       className={'custom-header__logo'}
-      style={{background: `url("${image("header/logo_pep.svg")}") no-repeat center`}}
+      style={{background: `url("${image("header/logo.svg")}") no-repeat center`}}
     />
   )
 }
