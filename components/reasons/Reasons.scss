@@ -1,6 +1,6 @@
 .reasons {
   @mixin mod($mod) {
-    @include modifier("reasons", $mod){
+    @include modifier("reasons", $mod) {
       @content;
     }
   }
@@ -12,9 +12,48 @@
     }
   }
 
+  position: relative;
+  z-index: 5;
+  background-color: $BG;
+
   &__line {
     width: 100%;
     @include option(height, 5);
     background: linear-gradient(135deg, rgba(42, 188, 158, 0) 0%, #2abc9e 48.65%, rgba(42, 188, 158, 0) 100%);
+  }
+
+  &__container {
+    @include option(width, 1276);
+    @include option(margin, 0 auto);
+    @include option(padding, 0);
+  }
+
+  &__box {
+    @include option(width, 672);
+  }
+
+  &__title {
+    @include option(margin, 0);
+    @include option(padding, 97 0 0 3);
+    @include option(font-size, 55);
+    font-weight: bold;
+    line-height: 1.11;
+    background: linear-gradient(149deg, #b5feef 0%, #2eecc5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__text {
+    @include option(margin, 0);
+    @include option(padding, 0 0 0 3);
+    @include option(font-size, 17);
+    font-weight: 500;
+    line-height: 1.2;
+    opacity: 0.65;
+
+    &_upper {
+      @include option(padding, 20 0);
+    }
   }
 }

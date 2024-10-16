@@ -62,6 +62,7 @@
     position: relative;
     @include option(top, -488);
     @include option(left, 802);
+    pointer-events: none;
   }
 
   &__image {

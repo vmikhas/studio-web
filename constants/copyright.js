@@ -81,5 +81,13 @@ export const aboutContent = {
 }
 
 export const reasonsContent = {
-
+  title: "Причины сотрудничать с&nbsp;нами",
+  textUpper: "Пока конкуренты говорят о&nbsp;том, что они лучшие&nbsp;- мы&nbsp;это доказываем делом.",
+  text: "Вы&nbsp;можете ознакомиться с&nbsp;информацией о&nbsp;нас и&nbsp;посмотреть наше портфолио",
+  button: {
+    className: "custom-button_reasons",
+    href: "#",
+    text: "Портфолио",
+    tag: "a"
+  }
 }

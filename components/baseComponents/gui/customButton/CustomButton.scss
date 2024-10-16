@@ -29,9 +29,10 @@
     @include option(width, 200);
 
     .custom-button__text {
-      position: relative;
-      @include option(padding, 0 21 0 0);
+      @include option(padding, 0 15 0 0);
       @include option(font-size, 18);
+      font-weight: 600;
+      letter-spacing: 0.03em;
     }
 
     .custom-button__icon {
@@ -41,6 +42,38 @@
 
     svg {
       height: 100%;
+    }
+  }
+
+  &_reasons {
+    position: relative;
+    z-index: 5;
+    @include option(width, 196);
+    @include option(height, 53);
+    @include option(margin, 47 0 0 3);
+
+    @include option(border-radius, 4);
+    background-color: $BG;
+    box-shadow: 0 0 38px 0 rgba(46, 236, 197, 0.2);
+
+    &::before {
+      position: absolute;
+      @include option(top, 9);
+      @include option(left, 7);
+      z-index: 4;
+
+      content: "";
+      display: block;
+      @include option(width, 196);
+      @include option(height, 53);
+
+      border: 2px solid rgba(46, 236, 197, 0.4);
+      @include option(border-radius, 4);
+    }
+
+    .custom-button__text {
+      @include option(font-size, 19);
+      font-weight: 600;
     }
   }
 }
