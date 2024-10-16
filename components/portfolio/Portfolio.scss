@@ -1,0 +1,72 @@
+.portfolio {
+  @mixin mod($mod) {
+    @include modifier("portfolio", $mod){
+      @content;
+    }
+  }
+  @mixin mods($mods...) {
+    @for $i from 0 to length($mods) {
+      .portfolio_#{nth($mods, $i + 1)} & {
+        @content;
+      }
+    }
+  }
+
+  position: relative;
+
+  &__container {
+    @include option(width, 1276);
+    @include option(margin, 0 auto);
+    @include option(padding, 223 0 315);
+  }
+
+  &__title {
+    @include option(margin, 0);
+    @include option(padding, 0 0 0 3);
+    @include option(font-size, 55);
+    font-weight: bold;
+    line-height: 1.11;
+    background: linear-gradient(149deg, #b5feef 0%, #2eecc5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__text {
+    @include option(width, 530);
+    @include option(margin, 0);
+    @include option(padding, 24 0 43 3);
+    @include option(font-size, 17);
+    font-weight: 400;
+    line-height: 1.54;
+    letter-spacing: -0.005em;
+    opacity: 0.65;
+  }
+
+  &__carousel {
+
+  }
+
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    @include option(width, 619);
+    background-color: transparent;
+    cursor: grab;
+  }
+
+  &__item {
+    @include option(height, 363);
+    border: 1px solid rgba(46, 236, 197, 0.5);
+    @include option(border-radius, 6);
+    background: rgba(46, 236, 197, 0.05);
+    box-shadow: 0 0 106px 0 rgba(46, 236, 197, 0.1);
+    user-select: none;
+
+    img {
+      height: 100%;
+    }
+  }
+}

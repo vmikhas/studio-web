@@ -46,8 +46,6 @@
   }
 
   &_reasons {
-    position: relative;
-    z-index: 5;
     @include option(width, 196);
     @include option(height, 53);
     @include option(margin, 47 0 0 3);
@@ -60,7 +58,7 @@
       position: absolute;
       @include option(top, 9);
       @include option(left, 7);
-      z-index: 4;
+      z-index: -1;
 
       content: "";
       display: block;
@@ -74,6 +72,17 @@
     .custom-button__text {
       @include option(font-size, 19);
       font-weight: 600;
+    }
+  }
+
+  &_portfolio {
+    @include option(width, 269);
+    @include option(height, 51);
+    @include option(margin, 0 0 0 3);
+
+    .custom-button__text {
+      @include option(font-size, 17);
+      font-weight: 400;
     }
   }
 }

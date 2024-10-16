@@ -1,4 +1,11 @@
 export const settings = {
+  portfolio: {
+    slidesPerView: "auto",
+    loop: true,
+    spaceBetween: 50,
+    // allowTouchMove: true
+  },
+
   default : {
     slidesPerView: "auto",
     centeredSlides: true,
