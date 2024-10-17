@@ -44,7 +44,18 @@
   }
 
   &__carousel {
+    position: absolute;
+    @include option(top, 125);
+    @include option(right, -10);
+    width: 50%;
+    @include option(height, 577);
+    overflow: hidden;
+  }
 
+  .carousel {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .swiper {
@@ -66,6 +77,31 @@
     user-select: none;
 
     img {
+      height: 100%;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    @include option(height, 70);
+    //transform: translateY(-47%);
+    transform: translateY(-7%);
+    cursor: pointer;
+
+    &_prev {
+      //@include option(left, -10);
+      left: 50%;
+    }
+
+    &_next {
+      //@include option(left, 559);
+      //transform: translateY(-47%) rotate(180deg);
+      left: 79.65%;
+      transform: translateY(-7%) rotate(180deg);
+    }
+
+    svg {
       height: 100%;
     }
   }

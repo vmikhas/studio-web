@@ -6,6 +6,13 @@ export const settings = {
     // allowTouchMove: true
   },
 
+  tariff: {
+    slidesPerView: 3,
+    loop: false,
+    spaceBetween: 32,
+    centeredSlides: true
+  },
+
   default : {
     slidesPerView: "auto",
     centeredSlides: true,

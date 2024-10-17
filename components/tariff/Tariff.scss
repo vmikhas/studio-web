@@ -1,0 +1,155 @@
+.tariff {
+  @mixin mod($mod) {
+    @include modifier("tariff", $mod) {
+      @content;
+    }
+  }
+  @mixin mods($mods...) {
+    @for $i from 0 to length($mods) {
+      .tariff_#{nth($mods, $i + 1)} & {
+        @content;
+      }
+    }
+  }
+
+  position: relative;
+
+  &__container {
+    @include option(width, 1276);
+    @include option(margin, 0 auto);
+    @include option(padding, 171 0 0);
+  }
+
+  &__title {
+    @include option(margin, 0 0 0 8);
+    @include option(font-size, 55);
+    font-weight: bold;
+    line-height: 1.11;
+    text-align: center;
+    background: linear-gradient(126deg, #b5feef 0%, #2eecc5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__subtitle {
+    @include option(margin, 0);
+    @include option(padding, 42 0 0);
+    @include option(font-size, 32);
+    font-weight: 600;
+    text-align: center;
+    opacity: 0.6;
+  }
+
+  &__text {
+    @include option(margin, 0);
+    @include option(padding, 30 25 0);
+    @include option(font-size, 17);
+    font-weight: 400;
+    line-height: 1.54;
+    text-align: center;
+    opacity: 0.3;
+
+    &_days {
+      @include option(padding, 0);
+      text-align: start;
+      opacity: 0.3;
+    }
+  }
+
+  &__box {
+    display: flex;
+    @include option(gap, 20);
+    @include option(margin, 0 0 20);
+  }
+
+  &__price {
+    @include option(margin, 0);
+    @include option(font-size, 22);
+    font-weight: 600;
+    line-height: 1.54;
+    opacity: 0.6;
+  }
+
+  &__swiper {
+    //width: calc(370px + 2 * 295px + 2 * 32px);
+    width: 92%;
+    @include option(margin, 50 63 0);
+  }
+
+  //.swiper-wrapper:has(.swiper-slide) {
+  //  width: max-content;
+  //}
+
+  .swiper-slide {
+    flex-direction: column;
+    justify-content: space-between;
+    @include option(width, 370);
+    @include option(height, 570);
+    box-sizing: border-box;
+
+    text-align: start;
+
+    background: linear-gradient(219deg, rgba(49, 49, 52, 0.7) 0%, rgba(44, 44, 45, 0.7) 44.12%, rgba(41, 41, 41, 0.7) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    @include option(border-radius, 36);
+
+    transform: scale(0.723);
+    transition: all .3s ease;
+
+    user-select: none;
+    cursor: grab;
+  }
+
+  .swiper-slide-active {
+    z-index: 5;
+    @include option(width, 370);
+    @include option(height, 570);
+    background: linear-gradient(155deg, #313134 0%, #292929 51.31%, #282828 100%);
+    transform: scale(1);
+
+    .tariff__subtitle {
+      opacity: 1;
+    }
+
+    .tariff__text {
+      opacity: 0.75;
+    }
+
+    .tariff__text_days {
+      opacity: 0.4;
+    }
+
+    .tariff__price {
+      opacity: 1;
+    }
+  }
+
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    z-index: 4;
+    opacity: 1;
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    @include option(height, 70);
+    transform: translateY(152%);
+    cursor: pointer;
+
+    &_prev {
+      @include option(left, 425);
+    }
+
+    &_next {
+      @include option(left, 1450);
+      transform: translateY(152%) rotate(180deg);
+    }
+
+    svg {
+      height: 100%;
+    }
+  }
+}

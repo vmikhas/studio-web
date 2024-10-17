@@ -85,4 +85,39 @@
       font-weight: 400;
     }
   }
+
+  &_tariff {
+    @include option(width, 168);
+    border: 2px solid rgba(46, 236, 197, 0.7);
+    box-shadow: 0 0 38px 0 rgba(46, 236, 197, 0.1);
+
+    .swiper-slide-active & {
+      border: 1.50px solid #2eecc5;
+    }
+
+    .custom-button__text {
+      @include option(padding, 0 11 0 0);
+      @include option(font-size, 17);
+      font-weight: 500;
+      opacity: 0.6;
+
+      .swiper-slide-active & {
+        opacity: 1;
+      }
+    }
+
+    .custom-button__icon {
+      @include option(height, 16);
+      @include option(margin, 0 0 4);
+      opacity: 0.6;
+
+      .swiper-slide-active & {
+        opacity: 1;
+      }
+    }
+
+    svg {
+      height: 100%;
+    }
+  }
 }

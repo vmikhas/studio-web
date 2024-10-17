@@ -6,9 +6,10 @@ import {safeHTML} from "../../utils/safeHTML.js";
 import Carousel from "../baseComponents/gui/carousel/Carousel.js";
 import PortfolioSwiper from "./PortfolioSwiper.js";
 import {settings} from "../../constants/carousel-settings.js";
+import Icon from "../baseComponents/gui/icon/Icon.js";
 
 
-export default function Portfolio({className, children, title, text, button, images}) {
+export default function Portfolio({className, children, title, text, button, arrow, images}) {
   const [activeSlide, setActiveSlide] = useState(0);
 
   return (
@@ -20,31 +21,44 @@ export default function Portfolio({className, children, title, text, button, ima
         <CustomButton {...button}/>
       </div>
       <div className={"portfolio__carousel"}>
-        <div>
-          <Carousel
-            item={PortfolioSwiper}
-            itemsData={images}
-            selectedSlide={activeSlide}
-            settings={{
-              ...settings.portfolio,
-              ...{
-                navigation: {
-                  prevEl: "",
-                  nextEl: ""
-                },
-                onSlideChange(swiper){
-                  setActiveSlide(swiper.realIndex)
-                }
+        <Carousel
+          item={PortfolioSwiper}
+          itemsData={images}
+          selectedSlide={activeSlide}
+          settings={{
+            ...settings.portfolio,
+            ...{
+              autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+              },
+              navigation: {
+                prevEl: ".portfolio__button_prev",
+                nextEl: ".portfolio__button_next"
+              },
+              onSlideChange(swiper) {
+                // console.log(swiper.realIndex);
+                setActiveSlide(swiper.realIndex);
               }
-            }}
-          />
-        </div>
+            }
+          }}
+        />
       </div>
+      {images?.length > 1 &&
+        <div className={"portfolio__button portfolio__button_prev"}>
+          <Icon name={arrow}/>
+        </div>
+      }
+      {images?.length > 1 &&
+        <div className={"portfolio__button portfolio__button_next"}>
+          <Icon name={arrow}/>
+        </div>
+      }
     </div>
   );
 }
 Portfolio.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.node
 };
 

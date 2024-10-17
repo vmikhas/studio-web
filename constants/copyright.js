@@ -121,6 +121,7 @@ export const portfolioContent = {
     className:"custom-button_portfolio",
     text: "Компьютерные версии"
   },
+  arrow: "portfolio_arrow",
   images: [
     {
       img: `${image("portfolioSwiper/web3.jpg")}`,
@@ -150,5 +151,96 @@ export const portfolioContent = {
       img: `${image("portfolioSwiper/trading.jpg")}`,
       alt: "Сайт для компании Trading Star"
     },
+  ]
+}
+
+export const tariffContent = {
+  title: "Тарифы",
+  arrow: "portfolio_arrow",
+  cards: [
+    {
+      subtitle: "Сайт &ldquo;Интернет магизин&rdquo;",
+      text: "Сайт-визитка&nbsp;&mdash; компактный веб&#8209;ресурс&nbsp;&mdash; отличный старт бизнеса в&nbsp;интернете. Сайт-визитка содержит несколько страниц, в&nbsp;том числе&nbsp;&mdash; информацию о&nbsp;компании, её товарах и&nbsp;услугах, прейскурант&nbsp;цен, контакты&nbsp;и координаты для связи.",
+      price: "От&nbsp;75.000₽",
+      days: "От&nbsp;30&nbsp;дней",
+      button: {
+        className: "custom-button_tariff",
+        href: "#",
+        text: "Подробнее",
+        tag: "a",
+        target: "_blank",
+        icon: "arrow"
+      }
+    },
+    {
+      subtitle: "Сайт &ldquo;Каталог&rdquo;",
+      text: "Сайт-каталог&nbsp;&mdash; это полноценный веб-ресурс, в&nbsp;котором потребители могут ознакомиться с&nbsp;товарами или услугами компании. Являясь удобным инструментом продаж, сайт-каталог может повысить доходность бизнеса и&nbsp;упростить задачу по&nbsp;предоставлению ассортимента целевой аудитории.",
+      price: "От&nbsp;60.000₽",
+      days: "От&nbsp;15&nbsp;дней",
+      button: {
+        className: "custom-button_tariff",
+        href: "#",
+        text: "Подробнее",
+        tag: "a",
+        target: "_blank",
+        icon: "arrow"
+      }
+    },
+    {
+      subtitle: "Сайт &ldquo;Визитка&rdquo;",
+      text: "Сайт-визитка&nbsp;&mdash; компактный веб&#8209;ресурс&nbsp;&mdash; отличный старт бизнеса в&nbsp;интернете. Сайт-визитка содержит несколько страниц, в&nbsp;том числе&nbsp;&mdash; информацию о&nbsp;компании, её товарах и&nbsp;услугах, прейскурант&nbsp;цен, контакты и координаты для связи.",
+      price: "От&nbsp;30.000₽",
+      days: "От&nbsp;5&nbsp;дней",
+      button: {
+        className: "custom-button_tariff",
+        href: "#",
+        text: "Подробнее",
+        tag: "a",
+        target: "_blank",
+        icon: "arrow"
+      }
+    },
+    {
+      subtitle: "Сайт &ldquo;Landing<br/> page&rdquo;",
+      text: "Одностраничный сайт (Landing Page)&nbsp;&mdash; так называют промо-сайты для презентации товара,&nbsp;услуги и&nbsp;организации мгновенных продаж. Мы умеем&nbsp;создавать веб-ресурсы, полностью готовые к&nbsp;наплыву лавины посетителей. Одна-единственная страница принесёт&nbsp;колоссальную прибыль:&nbsp;иначе и&nbsp;быть не<br/> может.",
+      price: "От&nbsp;25.000₽",
+      days: "От&nbsp;17&nbsp;дней",
+      button: {
+        className: "custom-button_tariff",
+        href: "#",
+        text: "Подробнее",
+        tag: "a",
+        target: "_blank",
+        icon: "arrow"
+      }
+    },
+    {
+      subtitle: "Сайт &ldquo;Корп.сайт&rdquo;",
+      text: "Корпоративный сайт&nbsp;&mdash; это крупномасштабный портал, который создается не&nbsp;только для контакта организации с клиентами, но&nbsp;и&nbsp;для обмена информацией, мнениями, идеями между сотрудниками и руководством. Электронный ресурс такого типа&nbsp;&mdash; лицо компании, солидный &ldquo;костюм&rdquo;, вызывающий у&nbsp;партнёров и контрагентов&nbsp;уважение и&nbsp;интерес.",
+      price: "От&nbsp;60.000₽",
+      days: "От&nbsp;17&nbsp;дней",
+      button: {
+        className: "custom-button_tariff",
+        href: "#",
+        text: "Подробнее",
+        tag: "a",
+        target: "_blank",
+        icon: "arrow"
+      }
+    },
+    {
+      subtitle: "Сайт &ldquo;Индивидуальный&rdquo;",
+      text: "Мы&nbsp;готовы выслушать вашу идею, и&nbsp;выполнить задание. Цена проекта будет складываться от ее технического задания и&nbsp;сроков выполнения.",
+      price: "От ?₽",
+      days: "От ? дней",
+      button: {
+        className: "custom-button_tariff",
+        href: "#",
+        text: "Подробнее",
+        tag: "a",
+        target: "_blank",
+        icon: "arrow"
+      }
+    }
   ]
 }
