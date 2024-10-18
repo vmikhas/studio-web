@@ -120,4 +120,13 @@
       height: 100%;
     }
   }
+
+  &_order {
+    @include option(width, 184);
+    @include option(height, 52);
+    @include option(margin, 31 0 0 4);
+    @include option(font-size, 17);
+    line-height: 1.54;
+    box-sizing: border-box;
+  }
 }

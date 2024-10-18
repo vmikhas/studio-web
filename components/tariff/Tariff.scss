@@ -17,7 +17,7 @@
   &__container {
     @include option(width, 1276);
     @include option(margin, 0 auto);
-    @include option(padding, 171 0 0);
+    @include option(padding, 171 0 217);
   }
 
   &__title {
@@ -30,6 +30,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    user-select: none;
   }
 
   &__subtitle {
@@ -136,7 +137,8 @@
     top: 50%;
     z-index: 5;
     @include option(height, 70);
-    transform: translateY(152%);
+    transition: opacity .2s ease-in-out;
+    transform: translateY(80%);
     cursor: pointer;
 
     &_prev {
@@ -145,11 +147,15 @@
 
     &_next {
       @include option(left, 1450);
-      transform: translateY(152%) rotate(180deg);
+      transform: translateY(80%) rotate(180deg);
     }
 
     svg {
       height: 100%;
     }
+  }
+
+  .swiper-button-disabled {
+    opacity: 0.2;
   }
 }

@@ -64,7 +64,7 @@ export const aboutContent = {
     ],
     imgAttr: {
       src: `${image("about/dev.png")}`,
-      alt: "Образ разработчика в стиле аниме",
+      alt: "Образ разработчика в стиле аниме"
     }
   },
   rings: [
@@ -78,7 +78,7 @@ export const aboutContent = {
       name: "ring"
     }
   ]
-}
+};
 
 export const reasonsContent = {
   title: "Причины сотрудничать с&nbsp;нами",
@@ -112,13 +112,13 @@ export const reasonsContent = {
       name: "support"
     }
   ]
-}
+};
 
 export const portfolioContent = {
   title: "Наше портфолио",
   text: "В&nbsp;данном портфолио вы&nbsp;сможете увидеть кейсы наших работ на&nbsp;2022&nbsp;- 2023 год",
   button: {
-    className:"custom-button_portfolio",
+    className: "custom-button_portfolio",
     text: "Компьютерные версии"
   },
   arrow: "portfolio_arrow",
@@ -150,9 +150,9 @@ export const portfolioContent = {
     {
       img: `${image("portfolioSwiper/trading.jpg")}`,
       alt: "Сайт для компании Trading Star"
-    },
+    }
   ]
-}
+};
 
 export const tariffContent = {
   title: "Тарифы",
@@ -243,4 +243,49 @@ export const tariffContent = {
       }
     }
   ]
-}
+};
+
+export const orderContent = {
+  title: "Оставь заявку",
+  button: {
+    className: "custom-button_order",
+    text: "Отправить",
+    type: "submit"
+  },
+  phone: {
+    sourceData: {
+      sources: [
+        {
+          srcSet: image("order/phone.webp"),
+          type: "image/webp"
+        }
+      ]
+    },
+    imgAttr: {
+      src: image("order/phone.png"),
+      alt: "Картинка телефона"
+    }
+  },
+  notifications: [
+    {
+      subtitle: "Уведомление!",
+      text: "В скорейшем времени вам перезвонят",
+      icon: {
+        imgAttr: {
+          src: image("order/call.png"),
+          alt: "Значок глобуса"
+        }
+      }
+    },
+    {
+      subtitle: "Работа закончена!",
+      text: "Мы&nbsp;закончили работу над вашим сайтом",
+      icon: {
+        imgAttr: {
+          src: image("order/globe.png"),
+          alt: "Значок вызова"
+        }
+      }
+    }
+  ]
+};

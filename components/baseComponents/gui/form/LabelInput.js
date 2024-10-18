@@ -1,13 +1,16 @@
-import React, { cloneElement, createElement, isValidElement } from "react";
+import React, {cloneElement, createElement, isValidElement} from "react";
 import * as PropTypes from "prop-types";
 import Input from "./Input";
+import classNames from "classnames";
 
-export default function LabelInput({ label, labelAs, labelTextProps, labelProps, ...rest }) {
-  labelTextProps = { ...labelTextProps, label };
-  if(typeof labelAs === "string")
+
+export default function LabelInput({comp, label, labelAs, labelTextProps, labelProps, ...rest}) {
+  labelTextProps = {...labelTextProps, label};
+  if (typeof labelAs === "string")
     labelTextProps.children = label;//Дописывать
   return (
-    <label {...labelProps}>
+    <label className={classNames("input", comp)} {...labelProps}>
+      {/*<label className={"input"} {...labelProps}>*/}
       {labelAs
         ? isValidElement(labelAs)
           ? cloneElement(labelAs, labelTextProps)
@@ -22,8 +25,8 @@ LabelInput.propTypes = {
   labelAs: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.elementType,
-    PropTypes.element,
+    PropTypes.element
   ]),
   labelTextProps: PropTypes.object,
-  labelProps: PropTypes.object,
+  labelProps: PropTypes.object
 };

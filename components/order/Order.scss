@@ -1,0 +1,168 @@
+.order {
+  @mixin mod($mod) {
+    @include modifier("order", $mod) {
+      @content;
+    }
+  }
+  @mixin mods($mods...) {
+    @for $i from 0 to length($mods) {
+      .order_#{nth($mods, $i + 1)} & {
+        @content;
+      }
+    }
+  }
+
+  background: linear-gradient(122deg, #313134 0%, #222224 29.21%, #12473c 59.25%, #292929 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  &__container {
+    position: relative;
+    @include option(width, 1276);
+    @include option(margin, 37 auto 54);
+  }
+
+  &__form {
+    @include option(max-width, 922);
+  }
+
+  &__inner {
+    @include option(margin, 0);
+    @include option(padding, 0);
+    border: none;
+  }
+
+  &__title {
+    @include option(padding, 0 0 0 2);
+    @include option(font-size, 50);
+    font-weight: 700;
+    line-height: 1.11;
+    background: linear-gradient(149deg, #b5feef 0%, #2eecc5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include option(column-gap, 45);
+    @include option(row-gap, 15);
+    @include option(margin, 25 0 0);
+  }
+
+  &__box {
+    width: max-content;
+  }
+
+  &__label {
+    @include option(padding, 0 0 0 3);
+    @include option(width, max-content);
+    @include option(font-size, 17);
+    line-height: 1.54;
+    opacity: 0.7;
+  }
+
+  &__input {
+    @include option(width, 437);
+    @include option(margin, 5 0 0 3);
+    @include option(padding, 12 25);
+
+    @include option(font-size, 20);
+    line-height: 1;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1.50px solid rgba(255, 255, 255, 0.2);
+    @include option(border-radius, 41);
+    box-shadow: 0 0 38px 0 rgba(255, 255, 255, 0.05);
+    box-sizing: border-box;
+
+    .input-box__error & {
+      border-color: $TOMATO;
+    }
+  }
+
+  .input {
+    position: relative;
+    display: block;
+    height: 100%;
+  }
+
+  .input__error {
+    position: absolute;
+    @include option(top, 2);
+    @include option(right, 2);
+    color: $TOMATO
+  }
+
+  &__image {
+    position: absolute;
+    @include option(bottom, -56);
+    @include option(right, 3);
+    @include option(height, 488);
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__list {
+    @include option(margin, 0);
+    @include option(padding, 0);
+    list-style-type: none;
+  }
+
+  &__item {
+    position: absolute;
+
+    display: flex;
+    @include option(gap, 8);
+    @include option(width, 213);
+    @include option(height, 58);
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+
+    @include option(border-radius, 29);
+
+    &_1 {
+      @include option(top, 7);
+      @include option(right, 182);
+    }
+
+    &_2 {
+      @include option(top, 173);
+      @include option(right, -135);
+    }
+  }
+
+  &__icon {
+    @include option(height, 43);
+    @include option(margin, 7 0 0 9);
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__wrap {
+
+  }
+
+  &__subtitle {
+    @include option(margin, 0);
+    @include option(padding, 7 8 0 0);
+    @include option(font-size, 14);
+    font-weight: 600;
+    opacity: 0.9;
+  }
+
+  &__text {
+    @include option(margin, 0);
+    @include option(padding, 5 8 10 0);
+    @include option(font-size, 12);
+    font-weight: 500;
+    line-height: 1.06;
+    opacity: 0.7;
+  }
+}
