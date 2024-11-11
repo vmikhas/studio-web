@@ -125,14 +125,20 @@
 
     @include option(border-radius, 29);
 
+    //animation: notificationTwitches .3s ease-in-out infinite;
+
     &_1 {
       @include option(top, 7);
       @include option(right, 182);
+
+      animation-delay: 3s;
     }
 
     &_2 {
       @include option(top, 173);
       @include option(right, -135);
+
+      animation-delay: 4.5s;
     }
   }
 

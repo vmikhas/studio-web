@@ -138,16 +138,16 @@
     z-index: 5;
     @include option(height, 70);
     transition: opacity .2s ease-in-out;
-    transform: translateY(80%);
     cursor: pointer;
 
     &_prev {
-      @include option(left, 425);
+      @include option(left, 400);
+      transform: translateY(-4%);
     }
 
     &_next {
-      @include option(left, 1450);
-      transform: translateY(80%) rotate(180deg);
+      @include option(left, 1475);
+      transform: translateY(-4%) rotate(180deg);
     }
 
     svg {
