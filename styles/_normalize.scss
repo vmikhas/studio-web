@@ -28,7 +28,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
+  margin: 0;
   font-weight: normal;
 }
 
@@ -51,6 +53,17 @@ form {
 * {
   transform-origin: 50% 50%;
   -webkit-tap-highlight-color: transparent;
+}
+
+img,
+svg {
+  height: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .clearfix {

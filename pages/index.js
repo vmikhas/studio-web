@@ -1,6 +1,7 @@
-import React from 'react';
+import React from "react";
 import PageDescription from "../components/baseComponents/head/pageDescription/PageDescription";
 import defaultPage from "../constants/page-description";
+
 
 export default function Home() {
 
@@ -13,6 +14,6 @@ export default function Home() {
 
 export async function getStaticProps() {
   return {
-    props: {},
+    props: {}
   };
 }

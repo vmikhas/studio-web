@@ -289,3 +289,136 @@ export const orderContent = {
     }
   ]
 };
+
+export const footerContent = {
+  bgImage: [
+    {
+      sourceData: {
+        sources: [
+          {
+            srcSet: `${image("footer/star-big-m.webp")} 1.5x, ${image("footer/star-big-m@2x.webp")} 2x`,
+            type: "image/webp",
+            media: "(max-width: 1023px)"
+          },
+          {
+            srcSet: `${image("footer/star-big-m.png")} 1.5x, ${image("footer/star-big-m@2x.png")} 2x`,
+            type: "image/png",
+            media: "(max-width: 1023px)"
+          },
+          {
+            srcSet: `${image("footer/star-big.webp")}`,
+            type: "image/webp",
+            media: "(min-width: 1024px)"
+          }
+        ]
+      },
+      imgAttr: {
+        src: `${image("footer/star-big.png")}`,
+        alt: ""
+      }
+    },
+    {
+      sourceData: {
+        sources: [
+          {
+            srcSet: `${image("footer/star-big-m.webp")} 1.5x, ${image("footer/star-big-m@2x.webp")} 2x`,
+            type: "image/webp",
+            media: "(max-width: 1023px)"
+          },
+          {
+            srcSet: `${image("footer/star-big-m.png")} 1.5x, ${image("footer/star-big-m@2x.png")} 2x`,
+            type: "image/png",
+            media: "(max-width: 1023px)"
+          },
+          {
+            srcSet: `${image("footer/star-big.webp")}`,
+            type: "image/webp",
+            media: "(min-width: 1024px)"
+          }
+        ]
+      },
+      imgAttr: {
+        src: `${image("footer/star-big.png")}`,
+        alt: ""
+      }
+    },
+    {
+      sourceData: {
+        sources: [
+          {
+            srcSet: `${image("footer/star-little-m.webp")} 1.5x, ${image("footer/star-little-m@2x.webp")} 2x`,
+            type: "image/webp",
+            media: "(max-width: 1023px)"
+          },
+          {
+            srcSet: `${image("footer/star-little-m.png")} 1.5x, ${image("footer/star-little-m@2x.png")} 2x`,
+            type: "image/png",
+            media: "(max-width: 1023px)"
+          },
+          {
+            srcSet: `${image("footer/star-little.webp")}`,
+            type: "image/webp",
+            media: "(min-width: 1024px)"
+          }
+        ]
+      },
+      imgAttr: {
+        src: `${image("footer/star-little.png")}`,
+        alt: ""
+      }
+    },
+    {
+      sourceData: {
+        sources: [
+          {
+            srcSet: `${image("footer/star-little-m.webp")} 1.5x, ${image("footer/star-little-m@2x.webp")} 2x`,
+            type: "image/webp",
+            media: "(max-width: 1023px)"
+          },
+          {
+            srcSet: `${image("footer/star-little-m.png")} 1.5x, ${image("footer/star-little-m@2x.png")} 2x`,
+            type: "image/png",
+            media: "(max-width: 1023px)"
+          },
+          {
+            srcSet: `${image("footer/star-little.webp")}`,
+            type: "image/webp",
+            media: "(min-width: 1024px)"
+          }
+        ]
+      },
+      imgAttr: {
+        src: `${image("footer/star-little.png")}`,
+        alt: ""
+      }
+    }
+  ],
+  title: "Контакты",
+  social: [
+    {
+      logo: "footer/ok",
+      href: "#"
+    },
+    {
+      logo: "footer/be",
+      href: "#"
+    },
+    {
+      logo: "footer/tg",
+      href: "#"
+    },
+    {
+      logo: "footer/vk",
+      href: "#"
+    },
+    {
+      logo: "footer/gmail",
+      href: "#"
+    }
+  ],
+  copyright: "&copy;&nbsp;2019&ndash;2022, WEB Studio&nbsp;&mdash; webdevstudio23@gmail.com",
+  securityPolicy: {
+    text: "Политика сайта и обработка персональных данных",
+    href: "#"
+  }
+}

@@ -1,0 +1,164 @@
+.main-footer {
+  @mixin mod($mod) {
+    @include modifier("main-footer", $mod) {
+      @content;
+    }
+  }
+  @mixin mods($mods...) {
+    @for $i from 0 to length($mods) {
+      .main-footer_#{nth($mods, $i + 1)} & {
+        @content;
+      }
+    }
+  }
+
+  position: relative;
+
+  &__bg {
+    @include option(width, 1920);
+  }
+
+  &__bg-image {
+    position: absolute;
+
+    &_1 {
+      @include option(top, 157);
+      @include option(left, 672);
+      @include option(height, 30);
+    }
+
+    &_2 {
+      @include option(top, 77);
+      @include option(left, 1204);
+      @include option(height, 30);
+    }
+
+    &_3 {
+      @include option(top, 203);
+      @include option(left, 715);
+      @include option(height, 16);
+      opacity: 0.5;
+    }
+
+    &_4 {
+      @include option(top, 45);
+      @include option(left, 1191);
+      @include option(height, 16);
+      opacity: 0.5;
+    }
+  }
+
+  &__content {
+    @include option(width, 1276);
+    @include option(margin, 0 auto);
+    @include option(padding, 68 0 40);
+  }
+
+  &__title {
+    @include option(font-size, 96);
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include option(gap, 79);
+    @include option(margin, 110 auto 103);
+  }
+
+  &__social-link {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include option(width, 100);
+    @include option(height, 100);
+
+    background-color: $WHITE;
+    border-radius: 50%;
+
+    transition: .3s ease-in-out;
+
+    &:first-of-type,
+    &:last-of-type {
+      @include option(width, 90);
+      @include option(height, 90);
+
+      &::before {
+        @include option(width, 110);
+        @include option(height, 110);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      @include option(top, -11);
+      @include option(left, -11);
+
+      content: "";
+      @include option(width, 120);
+      @include option(height, 120);
+
+      background-color: transparent;
+      border: 0.052vw solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    &:hover {
+      background: radial-gradient(circle at 50% 50%, #2EECC5, #00644F);
+      transform: scale(1.4);
+
+      &::before {
+        border: 0.052vw solid rgba(46, 236, 197, 0.1);
+      }
+    }
+  }
+
+  &__social-image {
+    &_1 {
+      @include option(height, 37);
+    }
+
+    &_2 {
+      @include option(height, 29);
+    }
+
+    &_3 {
+      @include option(height, 37);
+    }
+
+    &_4 {
+      @include option(height, 33);
+    }
+
+    &_5 {
+      @include option(height, 34);
+    }
+  }
+
+  &__copyright {
+    @include option(font-size, 15);
+    line-height: 1.06;
+    text-align: center;
+    opacity: 0.7;
+  }
+
+  &__security-policy {
+    display: block;
+    width: max-content;
+    @include option(margin, 15 auto 0);
+    @include option(font-size, 13);
+    line-height: 1.06;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    opacity: 0.4;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

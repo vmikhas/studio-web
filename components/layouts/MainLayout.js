@@ -1,7 +1,6 @@
 import React, {useMemo} from "react";
 import CustomHeader from "../baseComponents/gui/customHeader/CustomHeader";
-import Footer from "../baseComponents/gui/footer/Footer";
-import {aboutContent, header, orderContent, portfolioContent, reasonsContent, tariffContent} from "../../constants/copyright";
+import {aboutContent, footerContent, header, orderContent, portfolioContent, reasonsContent, tariffContent} from "../../constants/copyright";
 import {node} from "prop-types";
 import ModalProvider from "../baseComponents/controllers/modalController/ModalProvider";
 import Preloader from "../baseComponents/gui/preloader/Preloader";
@@ -11,6 +10,7 @@ import Reasons from "../reasons/Reasons.js";
 import Portfolio from "../portfolio/Portfolio.js";
 import Tariff from "../tariff/Tariff.js";
 import Order from "../order/Order.js";
+import Footer from "../footer/Footer.js";
 
 
 export default function MainLayout({children}) {
@@ -30,7 +30,7 @@ export default function MainLayout({children}) {
         <Portfolio {...portfolioContent}/>
         <Tariff {...tariffContent}/>
         <Order {...orderContent}/>
-        <Footer/>
+        <Footer {...footerContent}/>
       </div>
     </ModalProvider>
   );
